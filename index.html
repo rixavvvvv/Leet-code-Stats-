@@ -1,65 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeetCode</title>
+    <title>LeetCode Stats Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <!-- heading
-        user data
-        stats -->
-
-        <h1>LeetMatrics</h1>
-
-        <div class="user-container">
-            <p>Enter your username</p>
-            <div class="user-input-container">
-                <input type="text" placeholder="Enter your leetCode ID:" id="user-input">
-                <button id="serch-btn">Serch</button>
-            </div>
-
-
-        </div>
-
-        <div class="user-states">
-            <div class="progress">
+    <main class="main-dashboard">
+        <header class="dashboard-header">
+            <h1>LeetCode Stats Overview</h1>
+            <p class="subtitle">Get a beautiful summary of your LeetCode progress</p>
+        </header>
+        <section class="user-search-section">
+            <form class="user-form" onsubmit="return false;">
+                <label for="user-input" class="user-label">LeetCode Username</label>
+                <div class="user-input-row">
+                    <input type="text" placeholder="Enter your LeetCode ID" id="user-input" autocomplete="off">
+                    <button id="serch-btn" type="button">Search</button>
+                </div>
+            </form>
+        </section>
+        <section class="stats-summary-section">
+            <div class="progress-row">
                 <div class="progress-item">
                     <div class="easy-progress circle">
                         <span id="easy-label"></span>
-                        Easy
                     </div>
+                    <span class="progress-label easy">Easy</span>
                 </div>
-
-                <div class="progress-item circle">
-                    <div class="Medium-progress">
+                <div class="progress-item">
+                    <div class="Medium-progress circle">
                         <span id="Medium-label"></span>
-                        Medium
                     </div>
-
+                    <span class="progress-label medium">Medium</span>
                 </div>
-
                 <div class="progress-item">
                     <div class="Hard-progress circle">
                         <span id="hard-label"></span>
-                        hard
                     </div>
-
+                    <span class="progress-label hard">Hard</span>
                 </div>
-
             </div>
-
+        </section>
+        <section class="stats-card-section">
             <div class="stats-card">
-                <!-- directly populate card here from the JS -->
+                <!-- Populated by JS -->
             </div>
-
-        </div>
-    </div>
+        </section>
+    </main>
     <script src="leet.js"></script>
 </body>
-
 </html>
